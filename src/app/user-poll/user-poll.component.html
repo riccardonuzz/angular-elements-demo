@@ -1,0 +1,15 @@
+<aside class="animated zoomIn">
+    <h2>Poll: are you excited about Angular elements?</h2>
+    <hr>
+
+    <div class="buttons-container">
+        <button class="green" (click)="vote('yes')">Yes! :)</button>
+        <button class="red" (click)="vote('no')">No :(</button>
+    </div>
+
+    <div class="votes-container" *ngIf="hasVoted">
+        <p>Results:</p>
+       <p>Yes: {{yesPercent | number: '1.0-1'}} %</p>
+       <p>No: {{noPercent | number: '1.0-1'}} %</p>
+    </div>
+</aside>
